@@ -24,26 +24,26 @@ module.exports = {
     //     icon: "src/images/icon.png",
     //   },
     // },
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
-        web: [
-          {
-            name: `Quicksand`,
-            file: `https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap`,
-          },
-          {
-            name: "Monserrat",
-            file: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-omni-font-loader`,
+    //   options: {
+    //     enableListener: true,
+    //     preconnect: [
+    //       `https://fonts.googleapis.com`,
+    //       `https://fonts.gstatic.com`,
+    //     ],
+    //     web: [
+    //       {
+    //         name: `Quicksand`,
+    //         file: `https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap`,
+    //       },
+    //       {
+    //         name: "Monserrat",
+    //         file: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
+    //       },
+    //     ],
+    //   },
+    // },
 
     {
       resolve: "gatsby-source-filesystem",
