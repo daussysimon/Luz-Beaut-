@@ -2,6 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
+  const script = () => {
+    const isBrowser = typeof window !== "undefined";
+    if (isBrowser) {
+      if (window?.netlifyIdentity) {
+      }
+      {
+        window?.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window?.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    }
+  };
   return (
     <html {...props.htmlAttributes} lang="fr">
       <head>
@@ -23,6 +39,7 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
+      <script>{script()}</script>
     </html>
   );
 }
