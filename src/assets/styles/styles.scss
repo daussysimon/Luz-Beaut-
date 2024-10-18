@@ -249,8 +249,8 @@ li {
       max-width: 1300px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 50px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 70px;
     }
 
     &-asterisque {
@@ -353,7 +353,7 @@ li {
 
   &-description {
     margin: 25px;
-    height: 200px;
+    height: 180px;
     color: var(--para-color);
     display: flex;
     align-items: center;

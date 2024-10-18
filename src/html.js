@@ -1,26 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
-  const script = () => {
-    const isBrowser = typeof window !== "undefined";
-    if (isBrowser) {
-      if (window?.netlifyIdentity) {
-        (" ");
-      }
-      {
-        window?.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window?.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    }
-  };
   return (
-    <html {...props.htmlAttributes}>
+    <html {...props.htmlAttributes} lang="fr">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -28,7 +11,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -39,7 +22,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script>{script()}</script>
       </body>
     </html>
   );

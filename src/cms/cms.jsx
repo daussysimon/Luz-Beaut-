@@ -8,6 +8,22 @@ import { faSpa, faEye } from "@fortawesome/free-solid-svg-icons";
 import "@staticcms/core/dist/main.css";
 
 const CMSView = () => {
+  const script = () => {
+    const isBrowser = typeof window !== "undefined";
+    if (isBrowser) {
+      if (window?.netlifyIdentity) {
+      }
+      {
+        window?.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window?.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    }
+  };
   useEffect(() => {
     if (typeof window !== `undefined`) {
       CMS.init({ config });
@@ -22,6 +38,12 @@ const CMSView = () => {
 
   return (
     <>
+      <head>
+        <script
+          type="text/javascript"
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
+      </head>
       <style jsx="true" global="true">{`
         html,
         body {
@@ -39,6 +61,7 @@ const CMSView = () => {
           color: unset;
         }
       `}</style>
+      <script>{script()}</script>
     </>
   );
 };
