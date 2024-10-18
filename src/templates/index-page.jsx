@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { graphql, Link, navigate } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import "../assets/styles/styles.scss";
 import "../assets/styles/tablette-styles.scss";
@@ -23,20 +23,6 @@ function IndexPage({ data }) {
   const isMobile = useMobile();
 
   const [priceModalOpen, setPriceModalOpen] = useState(false);
-
-  const script = () => {
-    const isBrowser = typeof window !== "undefined";
-
-    if (isBrowser) {
-      const url = window?.location?.href;
-      const regex = /#confirmation_token=([^&]*)/;
-      const match = url?.match(regex);
-
-      if (match) {
-        navigate(`${window?.location?.origin}/admin/${window?.location?.hash}`);
-      }
-    }
-  };
 
   function cleanData(value) {
     let data = {};
@@ -82,8 +68,6 @@ function IndexPage({ data }) {
   const descriptionImage = getImage(pageData.descriptionSection.image);
   const contactImage = getImage(pageData.contact.image);
   const logo = getImage(seoData.logo.image);
-
-  script();
 
   return (
     <>
@@ -369,3 +353,23 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head() {
+  const script = () => {
+    const isBrowser = typeof window !== "undefined";
+
+    if (isBrowser) {
+      if (window?.netlifyIdentity) {
+        window?.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window?.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    }
+  };
+
+  return <script>{script()}</script>;
+}
