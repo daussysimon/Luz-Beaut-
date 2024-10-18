@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
   const script = () => {
     const isBrowser = typeof window !== "undefined";
+
     if (isBrowser) {
       if (window?.netlifyIdentity) {
-      }
-      {
         window?.netlifyIdentity.on("init", (user) => {
           if (!user) {
             window?.netlifyIdentity.on("login", () => {
@@ -18,6 +17,7 @@ export default function HTML(props) {
       }
     }
   };
+
   return (
     <html {...props.htmlAttributes} lang="fr">
       <head>
