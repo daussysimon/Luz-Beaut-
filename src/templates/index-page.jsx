@@ -106,7 +106,7 @@ function IndexPage({ data }) {
         <ParallaxBanner
           layers={[
             {
-              image: `${window.location.origin}/img/mainBackground-large.png`,
+              image: `https://sejaluzbeaute.netlify.app/img/mainBackground-large.png`,
               speed: -55,
             },
           ]}

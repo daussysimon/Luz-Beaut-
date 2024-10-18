@@ -7,7 +7,7 @@ const config = {
   locale: "fr",
   media_folder: "static/img",
   public_folder: "/img",
-  logo_url: "http://localhost:8000/img/logo.png",
+  logo_url: "https://sejaluzbeaute.netlify.app/img/logo.png",
   slug: {
     encoding: "ascii",
     clean_accents: true,
