@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import "../assets/styles/styles.scss";
@@ -23,6 +23,24 @@ function IndexPage({ data }) {
   const isMobile = useMobile();
 
   const [priceModalOpen, setPriceModalOpen] = useState(false);
+
+  const script = () => {
+    const isBrowser = typeof window !== "undefined";
+
+    if (isBrowser) {
+      console.log("test");
+      console.log(window);
+      if (window?.netlifyIdentity) {
+        window?.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window?.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    }
+  };
 
   function cleanData(value) {
     let data = {};
@@ -68,6 +86,8 @@ function IndexPage({ data }) {
   const descriptionImage = getImage(pageData.descriptionSection.image);
   const contactImage = getImage(pageData.contact.image);
   const logo = getImage(seoData.logo.image);
+
+  script();
 
   return (
     <>
