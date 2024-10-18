@@ -1,0 +1,61 @@
+@media (max-width: 1300px) {
+  .main {
+    &-massages {
+      margin: 90px 30px;
+      &-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &-contact {
+      box-sizing: border-box;
+      margin: 90px 30px 50px;
+    }
+  }
+}
+@media (max-width: 1040px) {
+  .header {
+    &-title-container {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .main {
+    &-description {
+      display: block;
+      &-container {
+        width: 100%;
+        max-width: 800px;
+        padding: 0 30px;
+        margin: 0 auto;
+        &-image {
+          width: 70%;
+          display: block;
+          max-width: 500px;
+          margin: 40px auto;
+        }
+      }
+    }
+    &-massages {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      &-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .card {
+    &-description {
+      font-size: 16px;
+    }
+
+    &-header {
+      &-title {
+        font-size: 20px;
+      }
+    }
+  }
+}

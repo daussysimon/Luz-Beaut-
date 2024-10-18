@@ -2,6 +2,8 @@ import React, { useMemo, useState } from "react";
 import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import "../assets/styles/styles.scss";
+import "../assets/styles/tablette-styles.scss";
+import "../assets/styles/mobile-styles.scss";
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,6 +15,7 @@ import {
 import { useMobile } from "../hook/useMobile";
 import Card from "../components/card";
 import PriceModal from "../components/priceModal";
+import Menu from "../components/menu";
 
 function IndexPage({ data }) {
   const { allMarkdownRemark } = data;
@@ -76,28 +79,15 @@ function IndexPage({ data }) {
         />
         <span className="header-backgroundFilter" />
         <div className="header-top">
-          <div className="header-top-logo">
+          <Link className="header-top-logo" to="/">
             <GatsbyImage
               image={logo}
               alt="logo de l'entreprise"
               className="header-top-logo-img"
             />
             <p>{seoData.logo.text}</p>
-          </div>
-          <nav className="header-top-nav">
-            <Link className="header-top-nav-link" to="#massage">
-              Massages
-            </Link>
-            <button
-              className="header-top-nav-link"
-              onClick={() => setPriceModalOpen((prev) => !prev)}
-            >
-              Tarifs
-            </button>
-            <Link className="header-top-nav-link" to="#contact">
-              Contact
-            </Link>
-          </nav>
+          </Link>
+          <Menu setPriceModalOpen={setPriceModalOpen} />
         </div>
         <div className="header-title-container">
           <h1 className="header-title">{seoData.title}</h1>

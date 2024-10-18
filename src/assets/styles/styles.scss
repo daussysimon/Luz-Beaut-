@@ -11,6 +11,7 @@ html {
   overflow-y: visible;
   height: max-content;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 h1,
@@ -41,13 +42,11 @@ li {
     left: 0;
     z-index: 0;
   }
-
   &-backgroundFilter {
     display: block;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
-
   &-top {
     display: flex;
     align-items: center;
@@ -97,8 +96,71 @@ li {
         }
       }
     }
-  }
 
+    &-mobileMenu {
+      display: none;
+
+      &-burgerMenu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        border-radius: 20px 20px 0 0;
+        flex-direction: column;
+        top: 43%;
+        transform: translateY(-50%);
+        right: 20px;
+        z-index: 1000;
+        height: 30px;
+        width: 50px;
+        background: transparent;
+        transition: 0.5s;
+        &-item {
+          display: block;
+          width: 25px;
+          height: 2px;
+          background: var(--main-color);
+          margin: 3px;
+          transition: 0.4s ease-in-out;
+        }
+      }
+
+      &-nav {
+        background: transparent;
+        max-height: 0px;
+        overflow: hidden;
+        color: var(--main-color);
+        padding: 0 50px;
+        position: absolute;
+        top: 42px;
+        right: 0;
+        z-index: 200;
+        transition: 0.5s;
+        &-item {
+          margin: 10px 0;
+        }
+
+        &-open {
+          padding: 30px 50px;
+          max-height: 300px;
+          background: var(--second-color);
+        }
+      }
+
+      &-burgerMenu-open {
+        background-color: var(--second-color);
+        .header-top-mobileMenu-burgerMenu-item:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        .header-top-mobileMenu-burgerMenu-item:nth-child(2) {
+          display: none;
+        }
+        .header-top-mobileMenu-burgerMenu-item:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
+  }
   &-title-container {
     position: absolute;
     z-index: 2;
@@ -318,7 +380,7 @@ li {
       font-size: 20px;
       color: var(--main-color);
       font-weight: 700;
-      margin: 10px;
+      margin: 10px 30px 20px;
       &-icon {
         margin-left: 10px;
         transition: 0.5s;
@@ -370,7 +432,7 @@ li {
 
 .priceModal {
   position: fixed;
-  padding: 80px;
+  padding: 40px;
   background: var(--second-color);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -407,6 +469,13 @@ li {
     }
   }
 
+  &-information {
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    margin: 50px auto 0;
+  }
+
   &-toggle {
     position: absolute;
     height: 50px;
@@ -427,13 +496,6 @@ li {
     &:hover {
       transform: rotate(80deg);
     }
-  }
-
-  &-information {
-    max-width: 600px;
-    text-align: center;
-    color: white;
-    margin: 50px auto 0;
   }
 }
 

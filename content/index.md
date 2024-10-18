@@ -37,5 +37,5 @@ contact:
   phone: "0606060606"
   email: test@gmail.com
   adresse: Landes et pays basque
-  image: /img/image_2d2e89e5ed6df16b88d839b7b09f0985.jpeg
+  image: /img/contact.jpeg
 ---
