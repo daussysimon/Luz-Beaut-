@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, navigate } from "gatsby";
 import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import "../assets/styles/styles.scss";
 import "../assets/styles/tablette-styles.scss";
@@ -28,16 +28,13 @@ function IndexPage({ data }) {
     const isBrowser = typeof window !== "undefined";
 
     if (isBrowser) {
-      console.log("test");
-      console.log(window);
-      if (window?.netlifyIdentity) {
-        window?.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window?.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
+      const url = isBrowser.location.href;
+      const regex = /#confirmation_token=([^&]*)/;
+      const match = url.match(regex);
+      if (match) {
+        navigate(
+          `${isBrowser.location.origin}/admin/${isBrowser.location.hash}`
+        );
       }
     }
   };
