@@ -28,13 +28,12 @@ function IndexPage({ data }) {
     const isBrowser = typeof window !== "undefined";
 
     if (isBrowser) {
-      const url = isBrowser?.location?.href;
+      const url = window?.location?.href;
       const regex = /#confirmation_token=([^&]*)/;
       const match = url?.match(regex);
+
       if (match) {
-        navigate(
-          `${isBrowser?.location?.origin}/admin/${isBrowser?.location?.hash}`
-        );
+        navigate(`${window?.location?.origin}/admin/${window?.location?.hash}`);
       }
     }
   };
