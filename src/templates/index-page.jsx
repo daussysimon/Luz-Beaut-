@@ -30,7 +30,7 @@ function IndexPage({ data }) {
     if (isBrowser) {
       const url = isBrowser?.location?.href;
       const regex = /#confirmation_token=([^&]*)/;
-      const match = url.match(regex);
+      const match = url?.match(regex);
       if (match) {
         navigate(
           `${isBrowser?.location?.origin}/admin/${isBrowser?.location?.hash}`
