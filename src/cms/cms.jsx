@@ -2,12 +2,21 @@ import CMS from "@staticcms/core";
 import React, { useEffect } from "react";
 import config from "./config";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpa, faEye } from "@fortawesome/free-solid-svg-icons";
+
 import "@staticcms/core/dist/main.css";
 
 const CMSView = () => {
   useEffect(() => {
     if (typeof window !== `undefined`) {
       CMS.init({ config });
+
+      CMS.registerIcon("massageIcon", () => (
+        <FontAwesomeIcon icon={faSpa} size="lg" />
+      ));
+
+      CMS.registerIcon("seo", () => <FontAwesomeIcon icon={faEye} size="lg" />);
     }
   }, []);
 

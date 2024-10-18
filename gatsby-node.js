@@ -64,13 +64,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
+    console.log(posts);
+
     posts
-      .filter(
-        (post) =>
-          !["ui", "comments", "categories", "products"].includes(
-            post.node.frontmatter.templateKey
-          )
-      )
+      .filter((post) => post.node.frontmatter.templateKey)
       .forEach((post, index) => {
         console.log(post);
 

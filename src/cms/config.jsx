@@ -4,8 +4,10 @@ const config = {
     branch: "main", // Branch to update (optional; defaults to main)
   },
   local_backend: true,
+  locale: "fr",
   media_folder: "static/img",
   public_folder: "/img",
+  logo_url: "http://localhost:8000/img/logo.png",
   slug: {
     encoding: "ascii",
     clean_accents: true,
@@ -25,7 +27,7 @@ const config = {
       label: "Pages",
       delete: false,
       editor: {
-        preview: true,
+        preview: false,
         frame: true,
       },
       files: [
@@ -48,52 +50,28 @@ const config = {
               widget: "object",
               fields: [
                 {
-                  name: "title",
-                  label: "Title",
-                  widget: "string",
-                },
-                {
-                  name: "description",
-                  label: "Description",
-                  widget: "text",
-                },
-                {
                   name: "backgroundImage",
-                  label: "Background Image",
+                  label: "Image de fond",
                   widget: "image",
                 },
                 {
-                  name: "button 1",
-                  label: "Button 1",
+                  name: "headerButton",
+                  label: "Bouton ",
                   widget: "object",
-                  summary: "{{fields.label}}: {{fields.link}}",
                   fields: [
                     {
-                      name: "label",
-                      label: "Label",
+                      name: "visible",
+                      label: "Visible",
+                      widget: "boolean",
+                    },
+                    {
+                      name: "title",
+                      label: "Titre",
                       widget: "string",
                     },
                     {
                       name: "link",
-                      label: "Link",
-                      widget: "string",
-                    },
-                  ],
-                },
-                {
-                  name: "button 2",
-                  label: "Button 2",
-                  widget: "object",
-                  summary: "{{fields.label}}: {{fields.link}}",
-                  fields: [
-                    {
-                      name: "label",
-                      label: "Label",
-                      widget: "string",
-                    },
-                    {
-                      name: "link",
-                      label: "Link",
+                      label: "lien vers",
                       widget: "string",
                     },
                   ],
@@ -101,102 +79,141 @@ const config = {
               ],
             },
             {
-              name: "section2",
-              label: "Section 2",
+              name: "descriptionSection",
+              label: "Description",
               widget: "object",
-              collapse: true,
               fields: [
                 {
-                  name: "part1",
-                  label: "Part 1",
-                  widget: "object",
-                  fields: [
-                    {
-                      name: "title",
-                      label: "Title",
-                      widget: "string",
-                    },
-                    {
-                      name: "desciption",
-                      label: "Description",
-                      widget: "text",
-                    },
-                    {
-                      name: "image",
-                      labe: "Image",
-                      widget: "image",
-                    },
-                    {
-                      name: "button",
-                      label: "Button",
-                      widget: "object",
-                      summary: "{{fields.label}}: {{fields.link}}",
-                      fields: [
-                        {
-                          name: "label",
-                          label: "Label",
-                          widget: "string",
-                        },
-                        {
-                          name: "link",
-                          label: "Link",
-                          widget: "string",
-                        },
-                      ],
-                    },
-                  ],
+                  name: "title",
+                  label: "Titre",
+                  widget: "string",
                 },
                 {
-                  name: "part2",
-                  label: "Part 2",
-                  widget: "object",
-                  fields: [
-                    {
-                      name: "title",
-                      label: "Title",
-                      widget: "string",
-                    },
-                    {
-                      name: "desciption",
-                      label: "Description",
-                      widget: "text",
-                    },
-                    {
-                      name: "image",
-                      labe: "Image",
-                      widget: "image",
-                    },
-                    {
-                      name: "button",
-                      label: "Button",
-                      widget: "object",
-                      summary: "{{fields.label}}: {{fields.link}}",
-                      fields: [
-                        {
-                          name: "label",
-                          label: "Label",
-                          widget: "string",
-                        },
-                        {
-                          name: "link",
-                          label: "Link",
-                          widget: "string",
-                        },
-                      ],
-                    },
-                  ],
+                  name: "image",
+                  label: "Image",
+                  widget: "image",
+                },
+                {
+                  name: "text",
+                  label: "Description",
+                  widget: "text",
                 },
               ],
             },
             {
-              name: "aboutUs",
-              label: "About us",
+              name: "massage",
+              label: "Massage",
               widget: "object",
               fields: [
-                { name: "text", label: "Description", widget: "text" },
-                { name: "video", label: "Video", widget: "video" },
+                { name: "title", label: "Titre", widget: "string" },
+                { name: "asterisque", label: "Astérisque", widget: "string" },
+                {
+                  name: "priceInformation",
+                  label: "Information pour les tarifs  à domicile",
+                  widget: "text",
+                },
               ],
             },
+            {
+              name: "contact",
+              label: "Contact",
+              widget: "object",
+              fields: [
+                { name: "title", label: "Titre", widget: "string" },
+                {
+                  name: "phone",
+                  label: "Numéro de téléphone",
+                  widget: "string",
+                },
+                { name: "email", label: "Adresse email", widget: "string" },
+                { name: "adresse", label: "Adresse", widget: "string" },
+                { name: "image", label: "Image", widget: "image" },
+                {
+                  name: "instagram",
+                  label: "Instagram",
+                  widget: "object",
+                  fields: [
+                    { name: "link", label: "lien", widget: "string" },
+                    { name: "visible", label: "Visible", widget: "boolean" },
+                  ],
+                },
+                {
+                  name: "facebook",
+                  label: "Facebook",
+                  widget: "object",
+                  fields: [
+                    { name: "link", label: "lien", widget: "string" },
+                    { name: "visible", label: "Visible", widget: "boolean" },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "seo",
+      label: "Seo",
+      icon: "seo",
+      delete: false,
+      editor: {
+        preview: false,
+        frame: true,
+      },
+      files: [
+        {
+          name: "seo",
+          label: "SEO",
+          file: "/content/seo/index.md",
+          description: "Information concernant le SEO",
+          fields: [
+            {
+              name: "title",
+              label: "Titre",
+              widget: "string",
+            },
+            { name: "type", label: "type", widget: "hidden", default: "seo" },
+            {
+              name: "description",
+              label: "Description",
+              widget: "text",
+            },
+            {
+              name: "logo",
+              label: "Logo",
+              widget: "object",
+              fields: [
+                { name: "text", label: "Text", widget: "string" },
+                { name: "image", label: "Image", widget: "image" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "massages",
+      label: "Massages",
+      icon: "massageIcon",
+      folder: "/content/massages",
+      create: true,
+      editor: {
+        preview: false,
+        frame: false,
+      },
+      fields: [
+        { name: "title", label: "Titre", widget: "string" },
+        { name: "description", label: "Description", widget: "text" },
+        { name: "image", label: "Image", widget: "image" },
+        { name: "type", label: "type", widget: "hidden", default: "massage" },
+        {
+          name: "prix",
+          label: "Prix",
+          widget: "list",
+          fields: [
+            { name: "time", label: "Temps en min", widget: "number" },
+            { name: "price", label: "Prix", widget: "number" },
           ],
         },
       ],
