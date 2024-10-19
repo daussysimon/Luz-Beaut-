@@ -22,12 +22,6 @@ const CMSView = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="text/javascript"
-          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-        ></script>
-      </head>
       <style jsx="true" global="true">{`
         html,
         body {
