@@ -1,9 +1,7 @@
 import Cms from "../cms/cms";
 import React from "react";
-import netlifyIdentityWidget from "netlify-identity-widget";
 
 const Admin = () => {
-  netlifyIdentityWidget.init();
   return (
     <>
       <Cms />
@@ -12,3 +10,12 @@ const Admin = () => {
 };
 
 export default Admin;
+
+export function Head() {
+  return (
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+  );
+}
