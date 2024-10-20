@@ -18,34 +18,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
 
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     icon: "src/images/icon.png",
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-omni-font-loader`,
-    //   options: {
-    //     enableListener: true,
-    //     mode: "async",
-    //     preconnect: [
-    //       `https://fonts.googleapis.com`,
-    //       `https://fonts.gstatic.com`,
-    //     ],
-    //     web: [
-    //       {
-    //         name: `Quicksand`,
-    //         file: `/font/Quicksand.ttf`,
-    //       },
-    //       {
-    //         name: "Inconsolata",
-    //         file: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap",
-    //       },
-    //     ],
-    //   },
-    // },
-
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/images/icon.png",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
