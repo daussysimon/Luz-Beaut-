@@ -33,8 +33,8 @@ export default function PriceModal({ data, setOpen, priceInformation }) {
                 <th>Massage</th>
                 {times
                   .sort((a, b) => (parseInt(a) < parseInt(b) ? -1 : 1))
-                  .map((it) => (
-                    <th>{it} min</th>
+                  .map((it, key) => (
+                    <th key={key}>{it} min</th>
                   ))}
               </tr>
               {pricesList?.current?.map((item, key) => (
