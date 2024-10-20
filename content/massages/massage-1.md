@@ -1,5 +1,5 @@
 ---
-title: Massage 1
+title: "Soin réconfortant "
 description: |2-
    Massage a domicle au dela d 10km de tarnos blabla Lorem ipsum, dolor
               sit amet consectetur adipisicing elit. Minus laboriosam eum vitae
@@ -7,8 +7,8 @@ description: |2-
 image: /img/amandine.jpg
 type: massage
 prix:
-  - time: "40"
-    price: "120"
+  - time: "50"
+    price: "230"
   - time: "120"
     price: "200"
   - time: "60"
