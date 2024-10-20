@@ -24,26 +24,27 @@ module.exports = {
     //     icon: "src/images/icon.png",
     //   },
     // },
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
-        web: [
-          {
-            name: `Quicksand`,
-            file: `https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap`,
-          },
-          {
-            name: "Inconsolata",
-            file: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap",
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-omni-font-loader`,
+    //   options: {
+    //     enableListener: true,
+    //     mode: "async",
+    //     preconnect: [
+    //       `https://fonts.googleapis.com`,
+    //       `https://fonts.gstatic.com`,
+    //     ],
+    //     web: [
+    //       {
+    //         name: `Quicksand`,
+    //         file: `/font/Quicksand.ttf`,
+    //       },
+    //       {
+    //         name: "Inconsolata",
+    //         file: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap",
+    //       },
+    //     ],
+    //   },
+    // },
 
     {
       resolve: "gatsby-source-filesystem",

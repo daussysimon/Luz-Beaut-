@@ -69,6 +69,13 @@ function IndexPage({ data }) {
   const logo = getImage(seoData.logo.image);
   return (
     <>
+      {priceModalOpen && (
+        <PriceModal
+          data={massagesData}
+          setOpen={() => setPriceModalOpen((prev) => !prev)}
+          priceInformation={pageData.massage.priceInformation}
+        />
+      )}
       <header className="header">
         <GatsbyImage
           image={backgroundImage}
@@ -110,13 +117,6 @@ function IndexPage({ data }) {
           ]}
         >
           <div className="main-container">
-            {priceModalOpen && (
-              <PriceModal
-                data={massagesData}
-                setOpen={() => setPriceModalOpen((prev) => !prev)}
-                priceInformation={pageData.massage.priceInformation}
-              />
-            )}
             <div className="main-parallax">
               <section className="main-description">
                 <div className="main-description-container">
