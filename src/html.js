@@ -24,14 +24,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {typeof window !== `undefined` &&
-          (window.location.href.match(regex) ||
-            (window.location.href.match(regex2) && (
-              <script
-                type="text/javascript"
-                src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-              />
-            )))}
+
+        {/* <script
+          type="text/javascript"
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        /> */}
       </body>
     </html>
   );
