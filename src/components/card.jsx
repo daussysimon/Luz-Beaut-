@@ -25,7 +25,7 @@ export default function Card({ data }) {
             onClick={() => setPriceOpen((prev) => !prev)}
             className="card-prices-title"
           >
-            Tarif
+            Tarifs
             <span>
               <FontAwesomeIcon
                 className="card-prices-title-icon"
@@ -46,7 +46,7 @@ export default function Card({ data }) {
             <tbody>
               <tr>
                 <th>Durée</th>
-                <th>Tarif</th>
+                <th>Tarifs</th>
               </tr>
               {data.prix
                 .sort((a, b) => (parseInt(a.time) < parseInt(b.time) ? -1 : 1))

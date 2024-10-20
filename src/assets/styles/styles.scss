@@ -306,6 +306,7 @@ li {
           margin: 10px;
           img {
             height: 40px;
+            width: 40px;
           }
         }
       }
@@ -330,7 +331,7 @@ li {
 }
 
 .card {
-  background-color: #ffffff4b;
+  background-color: #ffffff8f;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   align-self: start;
@@ -343,11 +344,12 @@ li {
     }
     &-title {
       position: absolute;
-      top: 10px;
+      top: 18px;
       left: 0;
-      padding: 15px 30px;
+      padding: 8px 30px;
       color: var(--main-color);
-      background-color: rgba(0, 0, 0, 0.412);
+      background-color: var(--second-color);
+      border-radius: 0 10px 10px 0;
     }
   }
 
@@ -380,7 +382,7 @@ li {
       font-size: 20px;
       color: var(--main-color);
       font-weight: 700;
-      margin: 10px 30px 20px;
+      margin: 10px 15px 20px;
       &-icon {
         margin-left: 10px;
         transition: 0.5s;

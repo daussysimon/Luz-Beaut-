@@ -364,3 +364,35 @@ export const query = graphql`
     }
   }
 `;
+
+export function Head({ data }) {
+  const { allMarkdownRemark } = data;
+  function cleanData(value) {
+    let data = {};
+    Object.keys(value).forEach((item) => {
+      if (value[item] !== null) {
+        data = {
+          ...data,
+          [item]: value[item],
+        };
+      }
+    });
+    return data;
+  }
+
+  const seoData = useMemo(
+    () =>
+      cleanData(
+        allMarkdownRemark.nodes.find((item) => item.frontmatter.type === "seo")
+          .frontmatter
+      ),
+    [allMarkdownRemark]
+  );
+
+  return (
+    <>
+      <title>{seoData.title}</title>
+      <meta name="description" content={seoData.description}></meta>
+    </>
+  );
+}
