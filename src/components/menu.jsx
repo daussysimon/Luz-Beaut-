@@ -39,7 +39,7 @@ export default function Menu({ setPriceModalOpen }) {
               Tarifs
             </button>
             <li>
-              <Link className="header-top-mobileMenu-nav-item" to="#massage">
+              <Link className="header-top-mobileMenu-nav-item" to="#contact">
                 contact
               </Link>
             </li>
