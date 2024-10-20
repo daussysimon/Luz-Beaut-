@@ -23,7 +23,6 @@ function IndexPage({ data }) {
   const isMobile = useMobile();
 
   const [priceModalOpen, setPriceModalOpen] = useState(false);
-
   function cleanData(value) {
     let data = {};
     Object.keys(value).forEach((item) => {
@@ -68,18 +67,6 @@ function IndexPage({ data }) {
   const descriptionImage = getImage(pageData.descriptionSection.image);
   const contactImage = getImage(pageData.contact.image);
   const logo = getImage(seoData.logo.image);
-
-  useEffect(() => {
-    const isBrowser = typeof window !== "undefined";
-
-    if (isBrowser) {
-      const regex = /#invite_token=([a-zA-Z0-9]+)/;
-      if (window.location.href.match(regex)) {
-        navigate(`${window.location.origin}/admin/${window.location.hash}`);
-      }
-    }
-  }, []);
-
   return (
     <>
       <header className="header">

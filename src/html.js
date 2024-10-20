@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
+  const regex = /#invite_token=([a-zA-Z0-9]+)/;
+  const regex2 = /#recovery_token=([a-zA-Z0-9]+)/;
+
   return (
     <html {...props.htmlAttributes} lang="fr">
       <head>
@@ -21,6 +24,14 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        {typeof window !== `undefined` &&
+          (window.location.href.match(regex) ||
+            (window.location.href.match(regex2) && (
+              <script
+                type="text/javascript"
+                src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+              />
+            )))}
       </body>
     </html>
   );
