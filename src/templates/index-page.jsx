@@ -23,6 +23,7 @@ function IndexPage({ data }) {
   const isMobile = useMobile();
 
   const [priceModalOpen, setPriceModalOpen] = useState(false);
+
   function cleanData(value) {
     let data = {};
     Object.keys(value).forEach((item) => {
