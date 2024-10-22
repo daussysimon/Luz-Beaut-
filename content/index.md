@@ -8,7 +8,7 @@ header:
   backgroundImage: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
 descriptionSection:
   title: Au dela du bonheur
-  image: /img/amandine.jpg
+  image: /img/contact.jpeg
   text: Contrary to popular belief, Lorem Ipsum is not simply random text. It has
     roots in a piece of classical Latin literature from 45 BC, making it over
     2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney

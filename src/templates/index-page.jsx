@@ -111,7 +111,7 @@ function IndexPage({ data }) {
         <ParallaxBanner
           layers={[
             {
-              image: `https://sejaluzbeaute.netlify.app/img/mainBackground-large.png`,
+              image: `https://sejaluzbeaute.netlify.app/img/mainBackground-large.webp`,
               speed: -55,
             },
           ]}
@@ -261,97 +261,6 @@ export default function IndexPageContainer({ data }) {
   );
 }
 
-export const query = graphql`
-  {
-    allMarkdownRemark(limit: 10) {
-      nodes {
-        frontmatter {
-          templateKey
-          description
-          title
-
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                webpOptions: { quality: 100 }
-                placeholder: TRACED_SVG
-                sizes: "500px"
-              )
-            }
-          }
-          prix {
-            price
-            time
-          }
-          massage {
-            title
-            asterisque
-            priceInformation
-          }
-          type
-          contact {
-            adresse
-            email
-            phone
-            facebook {
-              link
-              visible
-            }
-            instagram {
-              link
-              visible
-            }
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  webpOptions: { quality: 100 }
-                  placeholder: TRACED_SVG
-                )
-              }
-            }
-          }
-          descriptionSection {
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  webpOptions: { quality: 100 }
-                  placeholder: TRACED_SVG
-                  sizes: "500px"
-                )
-              }
-            }
-            title
-            text
-          }
-          header {
-            headerButton {
-              link
-              title
-              visible
-            }
-            backgroundImage {
-              childImageSharp {
-                gatsbyImageData(
-                  webpOptions: { quality: 100 }
-                  placeholder: TRACED_SVG
-                )
-              }
-            }
-          }
-          logo {
-            image {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-            text
-          }
-        }
-      }
-    }
-  }
-`;
-
 export function Head({ data }) {
   const { allMarkdownRemark } = data;
   function cleanData(value) {
@@ -380,6 +289,114 @@ export function Head({ data }) {
     <>
       <title>{seoData.title}</title>
       <meta name="description" content={seoData.description}></meta>
+      <link rel="icon" href="/img/logo.png" />
     </>
   );
 }
+
+export const query = graphql`
+  {
+    allMarkdownRemark(limit: 10) {
+      nodes {
+        frontmatter {
+          templateKey
+          description
+          title
+
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                formats: WEBP
+                placeholder: TRACED_SVG
+                breakpoints: [700, 1300]
+                height: 300
+                width: 350
+              )
+            }
+          }
+          prix {
+            price
+            time
+          }
+          massage {
+            title
+            asterisque
+            priceInformation
+          }
+          type
+          contact {
+            adresse
+            email
+            phone
+            facebook {
+              link
+              visible
+            }
+            instagram {
+              link
+              visible
+            }
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  formats: WEBP
+                  placeholder: TRACED_SVG
+                  breakpoints: [700, 1300]
+                  height: 450
+                  width: 300
+                )
+              }
+            }
+          }
+          descriptionSection {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  formats: WEBP
+                  placeholder: TRACED_SVG
+                  breakpoints: [700, 1300]
+                  height: 450
+                  width: 300
+                )
+              }
+            }
+            title
+            text
+          }
+          header {
+            headerButton {
+              link
+              title
+              visible
+            }
+            backgroundImage {
+              childImageSharp {
+                gatsbyImageData(
+                  formats: WEBP
+                  placeholder: TRACED_SVG
+                  breakpoints: [700, 1300]
+                  height: 600
+                  width: 1200
+                )
+              }
+            }
+          }
+          logo {
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  formats: WEBP
+                  placeholder: TRACED_SVG
+                  breakpoints: [700, 1300]
+                  height: 80
+                  width: 80
+                )
+              }
+            }
+            text
+          }
+        }
+      }
+    }
+  }
+`;
