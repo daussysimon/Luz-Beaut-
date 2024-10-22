@@ -1,6 +1,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+const siteUrl = process.env.URL || `https://fallback.net`;
 module.exports = {
   flags: {
     DEV_SSR: false,
@@ -8,7 +10,13 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
+    (module.exports = {
+      siteMetadata: {
+        // If you didn't use the resolveSiteUrl option this needs to be set
+        siteUrl: siteUrl,
+      },
+      plugins: [`gatsby-plugin-sitemap`],
+    }),
     "gatsby-plugin-fontawesome",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
@@ -58,5 +66,54 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-feed`,
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             title
+    //             description
+    //             siteUrl
+    //             site_url: siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     feeds: [
+    //       {
+    //         serialize: ({ query: { site, allMarkdownRemark } }) => {
+    //           return allMarkdownRemark.nodes.map((node) => {
+    //             return Object.assign({}, node.frontmatter, {
+    //               description: node.excerpt,
+    //               date: node.frontmatter.date,
+    //               url: site.siteMetadata.siteUrl + node.fields.slug,
+    //               guid: site.siteMetadata.siteUrl + node.fields.slug,
+    //               custom_elements: [{ "content:encoded": node.html }],
+    //             });
+    //           });
+    //         },
+    //         query: `{
+    //           allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    //             nodes {
+    //               excerpt
+    //               html
+    //               fields {
+    //                 slug
+    //               }
+    //               frontmatter {
+    //                 title
+    //                 date
+    //               }
+    //             }
+    //           }
+    //         }`,
+    //         output: "/rss.xml",
+    //         title: "Gatsby Starter Blog RSS Feed",
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 };
