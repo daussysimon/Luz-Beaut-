@@ -4,7 +4,6 @@ import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import "../assets/styles/styles.scss";
 import "../assets/styles/tablette-styles.scss";
 import "../assets/styles/mobile-styles.scss";
-import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -249,11 +248,7 @@ function IndexPage({ data }) {
 }
 
 export default function IndexPageContainer({ data }) {
-  return (
-    <ParallaxProvider>
-      <IndexPage data={data} />
-    </ParallaxProvider>
-  );
+  return <IndexPage data={data} />;
 }
 
 export function Head({ data }) {
