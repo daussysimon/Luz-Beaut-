@@ -374,7 +374,8 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   formats: WEBP
-                  placeholder: TRACED_SVG
+                  placeholder: BLURRED
+                  blurredOptions: { toFormat: WEBP }
                   breakpoints: [700, 1300]
                   height: 600
                   width: 1200
