@@ -222,7 +222,8 @@ li {
 
 .main {
   overflow: hidden;
-  background-size: cover;
+  background-size: cover !important;
+  background-position: center !important;
   min-height: 2200px;
   overflow: hidden;
   &-container {
