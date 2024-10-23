@@ -375,9 +375,8 @@ export const query = graphql`
                 gatsbyImageData(
                   formats: WEBP
                   placeholder: BLURRED
-                  blurredOptions: { toFormat: WEBP }
-                  breakpoints: [700, 1300]
-                  height: 600
+                  quality: 80
+                  height: 800
                   width: 1200
                 )
               }
