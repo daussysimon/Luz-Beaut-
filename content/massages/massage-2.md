@@ -1,16 +1,14 @@
 ---
 title: Femme enceinte
-description: |2-
-   Massage a domicle au dela d 10km de tarnos blabla Lorem ipsum, dolor
-              sit amet consectetur adipisicing elit. Minus laboriosam eum vitae
-              atque ex, vel dolor totam numquam
-image: /img/amandine.jpg
+description: Soulage les tensions, apaise les douleurs lombaires et réduit la
+  rétention d'eau, tout en vous offrant un moment de détente profonde. Avec des
+  gestes doux et adaptés, je veille à votre bien-être, ainsi qu'à celui de votre
+  bébé.
+image: /img/96.jpg
 type: massage
 prix:
-  - time: "30"
-    price: "120"
-  - time: "120"
-    price: "200"
+  - time: "40"
+    price: "30"
   - time: "60"
-    price: "160"
+    price: "60"
 ---
