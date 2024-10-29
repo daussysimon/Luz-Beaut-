@@ -1,18 +1,16 @@
 ---
-title: Massage 4
-description: |2-
-   Massage a domicle au dela d 10km de tarnos blabla Lorem ipsum, dolor
-              sit amet consectetur adipisicing elit. Minus laboriosam eum vitae
-              atque ex, vel dolor totam numquam
-  pisicing elit. Minus laboriosam eum vitae
-              atque ex, vel dolor totam numquam
-image: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
+title: Relaxant sur-mesure
+description: "Bien plus qu'un simple moment de détente : c'est une véritable
+  pause pour votre corps et votre esprit. Grâce à de mouvements lents, fluides
+  et enveloppants, ce soin aide à relâcher les tensions et à réduire stress. Un
+  soin pour rétablir l'harmonie intérieure."
+image: /img/98.jpg
 type: massage
 prix:
   - time: "30"
-    price: "120"
-  - time: "120"
-    price: "200"
+    price: "30"
   - time: "60"
-    price: "160"
+    price: "60"
+  - time: "90"
+    price: "90"
 ---
