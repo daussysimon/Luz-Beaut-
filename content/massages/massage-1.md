@@ -1,16 +1,12 @@
 ---
-title: "Soin réconfortant "
-description: |2-
-   Massage a domicle au dela d 10km de tarnos blabla Lorem ipsum, dolor
-              sit amet consectetur adipisicing elit. Minus laboriosam eum vitae
-              atque ex, vel dolor totam numquam
-image: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
+title: Soin Sportif
+description: Ce soin est conçu pour soulager les tensions profondes, améliorer
+  souplesse musculaire et vous remettre sur pied plus rapidement.
+image: /img/93.jpg
 type: massage
 prix:
-  - time: "50"
-    price: "230"
-  - time: "120"
-    price: "200"
   - time: "60"
-    price: "160"
+    price: "60"
+  - time: "90"
+    price: "90"
 ---
