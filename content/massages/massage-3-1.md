@@ -1,18 +1,15 @@
 ---
-title: Massage 3
-description: |2-
-   Massage a domicle au dela d 10km de tarnos blabla Lorem ipsum, dolor
-              sit amet consectetur adipisicing elit. Minus laboriosam eum vitae
-              atque ex, vel dolor totam numquam
-  pisicing elit. Minus laboriosam eum vitae
-              atque ex, vel dolor totam numquam
-image: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
+title: Turbinada
+description: Cette technique brésilienne combine mouvements dynamiques et
+  l'utilisation de ventouses pour stimuler la circulation sanguine avec objectif
+  de réduire la cellulite, raffermir et lisser la peau.
+image: /img/94.jpg
 type: massage
 prix:
   - time: "30"
-    price: "120"
-  - time: "120"
-    price: "200"
+    price: "30"
   - time: "60"
-    price: "160"
+    price: "60"
+  - time: "90"
+    price: "90"
 ---
