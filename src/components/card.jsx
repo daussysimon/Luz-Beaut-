@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-export default function Card({ data }) {
+export default function Card({ data, information }) {
   const cardImage = getImage(data.image);
   const [priceOpen, setPriceOpen] = useState(false);
   return (
@@ -62,11 +62,7 @@ export default function Card({ data }) {
                 ))}
             </tbody>
           </table>
-          <p className="card-prices-information">
-            Massage a domicle au dela d 10km de tarnos blabla Lorem ipsum, dolor
-            sit amet consectetur adipisicing elit. Minus laboriosam eum vitae
-            atque ex, vel dolor totam numquam
-          </p>
+          <p className="card-prices-information">{information}</p>
         </div>
       </div>
     </div>

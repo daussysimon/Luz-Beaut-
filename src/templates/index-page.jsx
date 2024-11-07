@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { graphql, Link, navigate } from "gatsby";
+import React, { useMemo, useState } from "react";
+import { graphql, Link } from "gatsby";
 import { getImage, GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import "../assets/styles/styles.scss";
 import "../assets/styles/tablette-styles.scss";
@@ -133,7 +133,10 @@ function IndexPage({ data }) {
               <ul className="main-massages-list">
                 {massagesData.map((item, key) => (
                   <li className="card" key={key}>
-                    <Card data={item} />
+                    <Card
+                      data={item}
+                      information={pageData.massage.priceInformation}
+                    />
                   </li>
                 ))}
               </ul>

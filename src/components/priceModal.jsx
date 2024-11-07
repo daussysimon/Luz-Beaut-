@@ -40,9 +40,9 @@ export default function PriceModal({ data, setOpen, priceInformation }) {
               {pricesList?.current?.map((item, key) => (
                 <tr key={key}>
                   <td>{item.massage}</td>
-                  {times.map((it) => {
+                  {times.map((it, key) => {
                     return (
-                      <td>
+                      <td key={key}>
                         {item?.prices?.find((price) => price.time === it)
                           ? `${
                               item?.prices?.find((price) => price.time === it)
