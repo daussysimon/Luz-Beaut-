@@ -30,7 +30,7 @@ contact:
     link: sejaluzbeaute/
   facebook:
     visible: true
-    link: Seja-Luz-Beauté/61561757500551/
+    link: 61561757500551/
   title: Contact
   phone: "0661952320"
   email: sejaluzbeaute@gmail.com
