@@ -3,22 +3,22 @@ templateKey: index-page
 header:
   headerButton:
     visible: true
-    title: Réserver un soin
+    title: Réservez un soin
     link: tel:0661952320
   backgroundImage: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
 descriptionSection:
   title: Au-delà du bonheur
   image: /img/amandine.jpg
   text: >-
-    Chéz Seja Luz Beauté, je vous invite à découvrir une véritable parenthése de
+    Chez Seja Luz Beauté, je vous invite à découvrir une véritable parenthèse de
     bien-être, où chaque soin est pensé pour vous offrir une expérience unique
     et apaisante. 
 
 
-    Passionnée et praticienne dans le domaine du bien-être depuis plus de 10 ans, je mets tout en oeuvre pour que chaque séance soit un moment de sérénité, de relaxation, et de reconnexion à soi. Mon approche est holistique: que ce soit à travers un massage bien-être. sportif, un drainagymphatique ou un massage visage, chaque soin est personnalisé selon vos besoins spécifiques. 
+    Passionnée et praticienne dans le domaine du bien-être depuis plus de 10 ans, je mets tout en oeuvre pour que chaque séance soit un moment de sérénité, de relaxation, et de reconnexion à soi. Mon approche est holistique: que ce soit à travers un massage bien-être, sportif, un drainage lymphatique ou un massage visage, chaque soin est personnalisé selon vos besoins spécifiques. 
 
 
-    Mon objectif ? Vous aider à retrouver votre équilibre intérieur, en prenant soin aussi bien de votre corps que de votre esprit autour de valeurs qui me tiennent à coeur : Passion, Authenticité, Bien-être, Écoute et Sérénité.
+    Mon objectif ? Vous aider à retrouver votre équilibre intérieur, en prenant soin aussi bien de votre corps que de votre esprit autour de valeurs qui me tiennent à cœur : Passion, Authenticité, Bien-être, Écoute et Sérénité.
 massage:
   title: Carte des massages *
   asterisque: "* Massages à visée non thérapeutiques"
