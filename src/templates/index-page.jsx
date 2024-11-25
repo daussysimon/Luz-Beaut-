@@ -21,6 +21,8 @@ function IndexPage({ data }) {
 
   const isMobile = useMobile();
 
+  console.log(data);
+
   const [priceModalOpen, setPriceModalOpen] = useState(false);
 
   function cleanData(value) {
@@ -305,7 +307,7 @@ export function Head({ data }) {
 
 export const query = graphql`
   {
-    allMarkdownRemark(limit: 10) {
+    allMarkdownRemark(limit: 15) {
       nodes {
         html
         frontmatter {
