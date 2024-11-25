@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { HTMLContent } from "../components/content";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import "../assets/styles/style.scss";
+import "../assets/styles/styles.scss";
 
 export default function Mentions({ data }) {
   const seoData = data.allMarkdownRemark.nodes.find(
