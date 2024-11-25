@@ -8,6 +8,6 @@ description: "Technique naturelle qui stimule la circulation, tonifie les
 image: /img/92.jpg
 type: massage
 prix:
-  - time: "60"
-    price: "60"
+  - time: "30"
+    price: "30"
 ---
