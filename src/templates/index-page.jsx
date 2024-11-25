@@ -245,6 +245,22 @@ function IndexPage({ data }) {
           Copyright 2024 - Tous droits reservés{" "}
           <a href="https://tropicwavestudio.com/">by Tropicwave Studio</a>
         </p>
+        <nav className="footer-nav">
+          <a
+            className="footer-link"
+            href="https://sejaluzbeaute.fr/mentionslegales"
+            target="__blank"
+          >
+            Mentions légales
+          </a>
+          <a
+            className="footer-link"
+            href="https://sejaluzbeaute.fr/cgv"
+            target="__blank"
+          >
+            CGV
+          </a>
+        </nav>
       </footer>
     </>
   );
@@ -291,6 +307,7 @@ export const query = graphql`
   {
     allMarkdownRemark(limit: 10) {
       nodes {
+        html
         frontmatter {
           templateKey
           description

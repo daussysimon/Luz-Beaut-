@@ -150,6 +150,44 @@ const config = {
             },
           ],
         },
+        {
+          name: "legalmentions",
+          label: "Mentions légales",
+          file: "/content/mentionslegales/index.md",
+          description: "Mentions légales de votre site",
+          fields: [
+            {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "mentions",
+            },
+            {
+              name: "body",
+              label: "body",
+              widget: "markdown",
+            },
+          ],
+        },
+        {
+          name: "cgv",
+          label: "CGV",
+          file: "/content/cgv/index.md",
+          description: "CGV de votre site",
+          fields: [
+            {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "cgv",
+            },
+            {
+              name: "body",
+              label: "body",
+              widget: "markdown",
+            },
+          ],
+        },
       ],
     },
     {

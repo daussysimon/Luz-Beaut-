@@ -354,6 +354,20 @@ li {
 
 .footer {
   padding: 10px;
+  &-nav {
+    margin: 10px auto;
+    align-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-link {
+    color: var(--para-color);
+    font-weight: 800;
+    margin: 0 10px;
+    font-family: var(--main-font);
+  }
+
   p {
     text-align: center;
     color: var(--para-color);
@@ -552,4 +566,49 @@ li {
   background-color: rgba(240, 240, 240, 0.534);
   height: 100%;
   width: 100%;
+}
+
+.header-mentions {
+  background-color: var(--second-color);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &-top {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 3vmax;
+    color: white;
+  }
+}
+
+.mentions {
+  margin: 50px;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.103);
+  padding: 30px;
+  &-content {
+    h2 {
+      font-size: 23px;
+      margin: 10px 0;
+      font-weight: 700;
+    }
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 0 10px;
+      li {
+        margin: 8px 10px;
+        list-style: circle;
+      }
+    }
+  }
 }

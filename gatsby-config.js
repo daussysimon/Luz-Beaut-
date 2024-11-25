@@ -15,7 +15,6 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-fontawesome",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sitemap",
@@ -29,12 +28,12 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: `${__dirname}/content/`,
+        name: `pages`,
+        path: `${__dirname}/content`,
+        __key: "pages",
       },
-      __key: "pages",
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -42,9 +41,6 @@ module.exports = {
         plugins: [
           {
             resolve: "gatsby-remark-relative-images",
-            options: {
-              name: "uploads",
-            },
           },
           {
             resolve: "gatsby-remark-images",
@@ -53,6 +49,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 2048,
+              withWebp: true,
             },
           },
           {
