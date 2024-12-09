@@ -2,9 +2,9 @@
 templateKey: index-page
 header:
   headerButton:
-    visible: true
+    visible: false
     title: Réservez un soin
-    link: sejaluzbeaute@gmail.com
+    link: 06 61 95 23 20
   backgroundImage: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
 descriptionSection:
   title: Au-delà du bonheur
