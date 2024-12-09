@@ -1,11 +1,10 @@
 ---
 templateKey: index-page
-
 header:
   headerButton:
     visible: true
     title: Réservez un soin
-    link: https://calendly.com/sejaluzbeaute
+    link: "0661952320"
   backgroundImage: /img/gettyimages-1175433234-034014dc5b9c45edaeaf04c7b80ceafc.webp
 descriptionSection:
   title: Au-delà du bonheur
