@@ -23,7 +23,7 @@ massage:
   title: Carte des massages *
   asterisque: "* Massages à visée non thérapeutiques"
   priceInformation: Un supplément de 10€ sera ajouté à la prestation pour les
-    déplacements à domicile au-délà de 20km de Tarnos
+    déplacements à domicile.
 contact:
   instagram:
     visible: true
