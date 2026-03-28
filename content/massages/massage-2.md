@@ -8,7 +8,7 @@ image: /img/96.jpg
 type: massage
 prix:
   - time: "40"
-    price: "40"
+    price: "50"
   - time: "60"
-    price: "60"
+    price: "70"
 ---
