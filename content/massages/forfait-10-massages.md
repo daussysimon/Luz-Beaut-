@@ -5,7 +5,7 @@ image: /img/blog-img-.jpg
 type: massage
 prix:
   - time: "30"
-    price: "250"
+    price: "340"
   - time: "60"
-    price: "500"
+    price: "590"
 ---
