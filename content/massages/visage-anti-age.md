@@ -1,5 +1,5 @@
 ---
-title: Visage anti-âge
+title: Massage Liftant Japonais
 description: "Technique naturelle qui stimule la circulation, tonifie les
   muscles du visage et réduit l'apparence des rides. Grâce à des gestes doux et
   liftants, je vous aide à redonner éclat et fermeté à votre peau, tout en
@@ -8,6 +8,8 @@ description: "Technique naturelle qui stimule la circulation, tonifie les
 image: /img/92.jpg
 type: massage
 prix:
-  - time: "30"
-    price: "30"
+  - time: "60"
+    price: "70"
+  - time: "75"
+    price: "80"
 ---
